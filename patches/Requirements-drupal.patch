@@ -1,0 +1,17 @@
+diff --git a/core/install/InstallRequirements.php b/core/install/InstallRequirements.php
+index 8c2ac91..8a0d64c 100644
+--- a/core/install/InstallRequirements.php
++++ b/core/install/InstallRequirements.php
+@@ -456,8 +456,10 @@ class InstallRequirements {
+ 
+     $unwritable_dirs = array();
+     foreach ($file_paths as $path) {
+-      if (!is_writable($path)) {
+-        $unwritable_dirs[] = $path;
++      if(strpos($path,'sites/default') === false) {
++        if (!is_writable($path)) {
++          $unwritable_dirs[] = $path;
++        }
+       }
+     }
+ 

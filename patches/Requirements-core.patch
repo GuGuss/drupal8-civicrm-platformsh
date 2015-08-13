@@ -1,0 +1,17 @@
+diff --git a/Civi/Install/Requirements.php b/Civi/Install/Requirements.php
+index d781145..97dc8e1 100644
+--- a/Civi/Install/Requirements.php
++++ b/Civi/Install/Requirements.php
+@@ -532,8 +532,10 @@ class Requirements {
+ 
+     $unwritable_dirs = array();
+     foreach ($file_paths as $path) {
+-      if (!is_writable($path)) {
+-        $unwritable_dirs[] = $path;
++      if(strpos($path,'sites/default') === false) {
++        if (!is_writable($path)) {
++          $unwritable_dirs[] = $path;
++        }
+       }
+     }
+ 
