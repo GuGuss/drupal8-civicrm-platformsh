@@ -1,0 +1,12 @@
+diff --git a/Civi/Install/Requirements.php b/Civi/Install/Requirements.php
+index d781145..72998a8 100644
+--- a/Civi/Install/Requirements.php
++++ b/Civi/Install/Requirements.php
+@@ -95,6 +95,7 @@ class Requirements {
+     $errors = array();
+ 
+     foreach ($this->database_checks as $check) {
++      error_log('-- DEBUG -- ' . print_r($db_config['host'],true) . ' -- END OF DEBUG --');
+       $errors[] = $this->$check($db_config);
+     }
+ 

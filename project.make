@@ -10,7 +10,7 @@ projects[drupal][version] = 8.0.0-beta14
 libraries[civicrm][download][type] = "get"
 libraries[civicrm][download][url] = "http://dist.civicrm.org/by-date/latest/master/civicrm-4.7.alpha1-drupal-20150812.tar.gz"
 libraries[civicrm][patch][] = patches/Requirements-core.patch
-;libraries[civicrm][patch][] = patches/Requirements-test.patch
+libraries[civicrm][patch][] = patches/Requirements-test.patch
 
 ; CiviCRM Module.
 projects[civicrmdrupal][type] = "module"
