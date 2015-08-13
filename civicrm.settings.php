@@ -171,8 +171,7 @@ if (!defined('CIVICRM_TEMPLATE_COMPILEDIR')) {
 /*
  * Get the routes informations from Platform.sh variables.
  */
-$routes = json_decode(base64_decode($_ENV['PLATFORM_RELATIONSHIPS']), TRUE);
-$endpoint = $relationships['database'][0];
+$routes = json_decode(base64_decode($_ENV['PLATFORM_ROUTES']), TRUE);
 
 if (!defined('CIVICRM_UF_BASEURL')) {
   define( 'CIVICRM_UF_BASEURL'      , key($routes));
