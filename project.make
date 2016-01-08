@@ -3,8 +3,7 @@ core = 8.x
 
 ; Drupal core.
 projects[drupal][type] = core
-projects[drupal][version] = 8.0.0-beta14
-;project[drupal][patch][url]=/sites/default/files/civipatch1.patch
+projects[drupal][version] = 8.0.2
 
 ; CiviCRM Librarie.
 libraries[civicrm][download][type] = "get"
@@ -16,7 +15,7 @@ libraries[civicrm][patch][] = patches/Requirements-test.patch
 projects[civicrmdrupal][type] = "module"
 projects[civicrmdrupal][download][type] = "get"
 projects[civicrmdrupal][download][url] = "https://github.com/civicrm/civicrm-drupal/archive/8.x-master.tar.gz"
-projects[civicrmdrupal][patch][] = patches/Requirements-drupal.patch
+;projects[civicrmdrupal][patch][] = patches/Requirements-drupal.patch
 
 ; Composer Manager.
 projects[composer_manager][type] = "module"
